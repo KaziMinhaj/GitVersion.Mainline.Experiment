@@ -2,8 +2,8 @@ mode: Mainline
 increment: Inherit
 update-build-number: true
 branches:
-  main:
-    regex: ^main$
+  master:
+    regex: ^master$
     is-mainline: true
   feature:
     regex: ^features?[/-]
