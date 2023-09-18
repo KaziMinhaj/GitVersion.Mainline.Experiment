@@ -1,0 +1,1 @@
+var btn = 'red btn';
