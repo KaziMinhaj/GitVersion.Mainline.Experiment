@@ -1,5 +1,5 @@
 ﻿namespace xenonApp;
-public class ClassOne
+public class ClassOneTwo
 {
     // code here
 }
