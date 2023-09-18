@@ -1,7 +1,5 @@
-﻿namespace xenonApp
+﻿namespace xenonApp;
+public class Class1
 {
-    public class Class1
-    {
-        // code here
-    }
+    // code here
 }
