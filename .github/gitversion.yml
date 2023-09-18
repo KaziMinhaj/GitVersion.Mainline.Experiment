@@ -1,39 +1,3 @@
-# mode: ContinuousDeployment
-# # next-version: 1.0.0
-# branches:
-#   master:
-#     regex: ^master$
-#     tag: alpha
-#     increment: Patch
-#   release:
-#     regex: ^release[/-]
-#     tag: beta
-#     increment: Minor
-
-# mode: Mainline
-# branches:
-#   master:
-#     tag: ''
-#     increment: Patch
-
-# mode: ContinuousDeployment
-# # next-version: 1.0.0
-# branches:
-#   master:
-#     regex: ^master$
-#     tag: alpha
-#     increment: Patch
-#   release:
-#     regex: ^release[/-]
-#     tag: beta
-#     increment: Minor
-
-# mode: Mainline
-# branches:
-#   master:
-#     tag: ''
-#     increment: Patch
-
 mode: Mainline
 increment: Inherit
 update-build-number: true
