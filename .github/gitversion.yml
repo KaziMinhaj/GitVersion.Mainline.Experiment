@@ -1,11 +1,17 @@
-mode: ContinuousDeployment
-# next-version: 1.0.0
+# mode: ContinuousDeployment
+# # next-version: 1.0.0
+# branches:
+#   master:
+#     regex: ^master$
+#     tag: alpha
+#     increment: Patch
+#   release:
+#     regex: ^release[/-]
+#     tag: beta
+#     increment: Minor
+
+mode: Mainline
 branches:
   master:
-    regex: ^master$
-    tag: alpha
+    tag: ''
     increment: Patch
-  release:
-    regex: ^release[/-]
-    tag: beta
-    increment: Minor
