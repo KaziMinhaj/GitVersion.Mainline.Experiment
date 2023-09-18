@@ -1,8 +1,8 @@
 mode: ContinuousDeployment
 next-version: 1.0.0
 branches:
-  main:
-    regex: ^main$
+  master:
+    regex: ^master$
     tag: ''
     increment: Patch
   release:
