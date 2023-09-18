@@ -3,7 +3,7 @@ next-version: 1.0.0
 branches:
   master:
     regex: ^master$
-    tag: ''
+    tag: 'alpha'
     increment: Patch
   release:
     regex: ^release[/-]
