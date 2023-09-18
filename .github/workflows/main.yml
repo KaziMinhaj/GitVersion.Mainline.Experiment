@@ -11,36 +11,36 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
+    - name: Checkout Repository
+      uses: actions/checkout@v2
 
-      - name: Setup .NET
-        uses: actions/setup-dotnet@v1
-        with:
-          dotnet-version: 5.x # Adjust to your project's requirements
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 5.x # Adjust to your project's requirements
 
-      - name: Restore Dependencies
-        run: dotnet restore
+    - name: Restore Dependencies
+      run: dotnet restore
 
-      - name: Build and Test
-        run: dotnet build --configuration Release
-        # Add test commands as needed
+    - name: Build and Test
+      run: dotnet build --configuration Release
+      # Add test commands as needed
 
   versioning:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Install GitVersion
-        run: |
-          # Install GitVersion tool
-          dotnet tool install --global GitVersion.Tool --version "5.x.x" # Adjust to the desired version
+    - name: Install GitVersion
+      run: |
+        # Install GitVersion tool
+        dotnet tool install --global GitVersion.Tool --version "5.x.x" # Adjust to the desired version
 
-      - name: Determine Version
-        run: gitversion
-        id: version
-
-  #     - name: Display Version
-  #       run: echo "Generated Version: ${{ steps.version.outputs.FullSemVer }}"
+    - name: Determine Version
+      run: gitversion
+      id: version
+      
+    - name: Display Version
+      run: echo "Generated Version: ${{ steps.version.outputs.FullSemVer }}"
 
   deploy:
     needs: version
@@ -48,11 +48,11 @@ jobs:
     if: github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/release/')
 
     steps:
-      - name: Deploy to Staging
-        run: |
-          # Replace this with your deployment script or commands
-          echo "Deploying version ${{ needs.version.outputs.FullSemVer }} to staging."
-          # Add deployment steps here, e.g., deploying to a staging environment
+    - name: Deploy to Staging
+      run: |
+        # Replace this with your deployment script or commands
+        echo "Deploying version ${{ needs.version.outputs.FullSemVer }} to staging."
+        # Add deployment steps here, e.g., deploying to a staging environment
 
   release:
     needs: deploy
@@ -60,15 +60,15 @@ jobs:
     if: startsWith(github.ref, 'refs/heads/release/')
 
     steps:
-      - name: Tag the Release
-        run: |
-          # Tag the commit with the version number
-          version="${{ needs.version.outputs.FullSemVer }}"
-          git tag "$version"
-          git push origin "$version"
+    - name: Tag the Release
+      run: |
+        # Tag the commit with the version number
+        version="${{ needs.version.outputs.FullSemVer }}"
+        git tag "$version"
+        git push origin "$version"
 
-      - name: Deploy to Production (example)
-        run: |
-          # Replace this with your production deployment script or commands
-          echo "Deploying version ${{ needs.version.outputs.FullSemVer }} to production."
-          # Add production deployment steps here
+    - name: Deploy to Production (example)
+      run: |
+        # Replace this with your production deployment script or commands
+        echo "Deploying version ${{ needs.version.outputs.FullSemVer }} to production."
+        # Add production deployment steps here
