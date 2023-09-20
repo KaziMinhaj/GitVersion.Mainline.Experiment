@@ -1,19 +1,23 @@
-mode: Mainline
-increment: Inherit
-update-build-number: true
+assembly-versioning-scheme: MajorMinorPatch
+mode: ContinuousDeployment
 branches:
-  master:
-    regex: ^master$
-    is-mainline: true
+  develop:
+    tag: ''
   feature:
-    regex: ^features?[/-]
-    tag: useBranchName
-    increment: Minor
-    source-branches:
-      - master
-  hotfix:
-    regex: ^(bugfix|hotfix(es)?)[/-]
-    tag: useBranchName
+    tag: ''
+  release:
+    tag: test
     increment: Patch
+    tracks-release-branches: true
     source-branches:
-      - master
+      - develop
+      - bugfix
+  bugfix:
+    tag: ''
+    increment: Patch
+    prevent-increment-of-merged-branch-version: false
+    regex: bugfix(es)?[/-]
+    source-branches:
+      - release
+ignore:
+  sha: []
