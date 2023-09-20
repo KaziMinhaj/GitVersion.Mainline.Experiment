@@ -1,6 +1,9 @@
 assembly-versioning-scheme: MajorMinorPatch
 mode: ContinuousDeployment
 branches:
+  master:
+    regex: ^master$
+    is-mainline: true
   develop:
     tag: ''
   feature:
