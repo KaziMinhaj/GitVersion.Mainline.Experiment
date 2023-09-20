@@ -6,8 +6,10 @@ branches:
     is-mainline: true
   develop:
     tag: ''
-  feature:
-    tag: ''
+feature:
+    regex: ^features?[/-]
+    tag: useBranchName
+    increment: Minor
   release:
     tag: test
     increment: Patch
