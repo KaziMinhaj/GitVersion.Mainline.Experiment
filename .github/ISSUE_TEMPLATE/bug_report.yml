@@ -13,7 +13,7 @@ body:
   - type: textarea
     id: bug-steps
     attributes:
-      label: What are the steps to reproduce this issue?
+      label: Steps to reproduce
       placeholder: |
         1. Make new project
         2. Run `make package`
@@ -23,18 +23,18 @@ body:
       required: true
 
   - type: textarea
-    id: bug-description
+    id: bug-expected
     attributes:
-      label: What happens?
-      description: A clear and concise description of what the bug is.
+      label: Expected behaviour
+      description: Tell us what should happen.
     validations:
       required: true
 
   - type: textarea
-    id: bug-expectation
+    id: bug-actual
     attributes:
       label: What were you expecting to happen?
-      description: A clear and concise description of what was supposed to happen.
+      description: Tell us what happens instead.
     validations:
       required: true
 
