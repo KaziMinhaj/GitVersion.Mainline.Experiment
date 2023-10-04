@@ -11,6 +11,34 @@ body:
         If you’re unsure whether the issue you’re having is a bug, you can post in [Discussions](https://github.com/theos/theos/discussions) instead.
 
   - type: textarea
+    id: bug-description
+    attributes:
+      label: What happens?
+      description: A clear and concise description of what the bug is.
+    validations:
+      required: true
+
+          ----
+              
+  - type: input
+    id: client-os-version
+    attributes:
+      label: What is your OS and its version?
+      placeholder: "e.g. windows 11"
+    validations:
+      required: true
+      
+  - type: input
+    id: client-browser
+    attributes:
+      label: which browser and its version?
+      placeholder: "e.g. Chrome 114"
+    validations:
+      required: true
+
+      ---
+      
+  - type: textarea
     id: bug-steps
     attributes:
       label: What are the steps to reproduce this issue?
@@ -22,13 +50,7 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: bug-description
-    attributes:
-      label: What happens?
-      description: A clear and concise description of what the bug is.
-    validations:
-      required: true
+
 
   - type: textarea
     id: bug-expectation
@@ -65,20 +87,4 @@ body:
     attributes:
       value: |
       
-        ----
-              
-  - type: input
-    id: client-os-version
-    attributes:
-      label: What is your OS and its version?
-      placeholder: "e.g. windows 11"
-    validations:
-      required: true
-      
-  - type: input
-    id: client-browser
-    attributes:
-      label: which browser and its version?
-      placeholder: "e.g. Chrome 114"
-    validations:
-      required: true
+
