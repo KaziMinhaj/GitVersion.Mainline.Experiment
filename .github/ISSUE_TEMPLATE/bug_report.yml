@@ -58,17 +58,19 @@ body:
       value: |
       
         ----
-        
-  - type: dropdown
-    id: client-os
+              
+  - type: input
+    id: client-os-version
     attributes:
-      label: What is your OS?
-      options:
-        - Windows
-        - macOS
-        - Linux
-      multiple: true
+      label: What is your OS and its version?
+      placeholder: "e.g. windows 11"
     validations:
       required: true
-    
-
+      
+  - type: input
+    id: client-browser
+    attributes:
+      label: which browser and its version?
+      placeholder: "e.g. Chrome and 114"
+    validations:
+      required: true
