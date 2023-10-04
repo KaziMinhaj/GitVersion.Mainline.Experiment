@@ -39,6 +39,14 @@ body:
       required: true
 
   - type: textarea
+    id: bug-actual
+    attributes:
+      label: What is the actual behaviour you are getting?
+      description: A clear and concise description of what is happening.
+    validations:
+      required: true
+
+  - type: textarea
     id: bug-logs
     attributes:
       label: Paste any relevant logs, error output, etc.
