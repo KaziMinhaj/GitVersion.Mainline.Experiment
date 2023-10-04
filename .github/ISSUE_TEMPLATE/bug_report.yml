@@ -63,6 +63,10 @@ body:
     id: your-environment
     attributes:
       label: Your Environment
+      placeholder: |
+        1. Your OS
+        2. which browser and its version
+        3. …
       description: A clear and concise description of what was supposed to happen.
     validations:
       required: true
