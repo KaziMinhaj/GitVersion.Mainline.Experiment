@@ -1,5 +1,5 @@
 name: "🐛 Bug Report"
-description: We broke something, again
+description: Something is not working as expected
 title: "[Bug]: "
 body:
   - type: markdown
