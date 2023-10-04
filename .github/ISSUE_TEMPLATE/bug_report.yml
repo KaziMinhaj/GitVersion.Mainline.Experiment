@@ -59,20 +59,7 @@ body:
         ----
         
         # Details of your host machine (the device you’re running Theos on)
-
-  - type: dropdown
-    id: host-os
-    attributes:
-      label: What OS are you seeing the problem on?
-      options:
-        - iOS
-        - macOS
-        - Linux/WSL
-        - Cygwin
-      multiple: true
-    validations:
-      required: true
-
+        
   - type: input
     id: host-os-version
     attributes:
