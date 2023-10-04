@@ -35,8 +35,6 @@ body:
       placeholder: "e.g. Chrome 114"
     validations:
       required: true
-
-      ----
       
   - type: textarea
     id: bug-steps
