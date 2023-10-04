@@ -88,9 +88,3 @@ body:
       placeholder: "e.g. iPhone X"
     validations:
       required: true
-
-  - type: input
-    id: client-jailbreak
-    attributes:
-      label: Which jailbreak is it using (if relevant)?
-      placeholder: "e.g. checkra1n"
