@@ -18,8 +18,8 @@ body:
     validations:
       required: true
 
-          ----
-              
+        ----
+
   - type: input
     id: client-os-version
     attributes:
@@ -27,7 +27,7 @@ body:
       placeholder: "e.g. windows 11"
     validations:
       required: true
-      
+
   - type: input
     id: client-browser
     attributes:
@@ -35,7 +35,7 @@ body:
       placeholder: "e.g. Chrome 114"
     validations:
       required: true
-      
+
   - type: textarea
     id: bug-steps
     attributes:
@@ -47,8 +47,6 @@ body:
         4. See error
     validations:
       required: true
-
-
 
   - type: textarea
     id: bug-expectation
@@ -84,5 +82,3 @@ body:
   - type: markdown
     attributes:
       value: |
-      
-
