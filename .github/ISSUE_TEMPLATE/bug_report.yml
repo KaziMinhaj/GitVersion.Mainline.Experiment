@@ -71,6 +71,6 @@ body:
     id: client-browser
     attributes:
       label: which browser and its version?
-      placeholder: "e.g. Chrome and 114"
+      placeholder: "e.g. Chrome 114"
     validations:
       required: true
