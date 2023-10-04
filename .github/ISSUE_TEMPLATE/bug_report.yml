@@ -56,88 +56,15 @@ body:
   - type: markdown
     attributes:
       value: |
+      
         ----
         
-        # Details of your host machine (the device you’re running Theos on)
-
-  - type: dropdown
-    id: host-os
+  - type: textarea
+    id: your-environment
     attributes:
-      label: What OS are you seeing the problem on?
-      options:
-        - iOS
-        - macOS
-        - Linux/WSL
-        - Cygwin
-      multiple: true
+      label: Your Environment
+      description: A clear and concise description of what was supposed to happen.
     validations:
       required: true
+    
 
-  - type: input
-    id: host-os-version
-    attributes:
-      label: What OS version does it have installed?
-      placeholder: "e.g. macOS 11.5.1"
-    validations:
-      required: true
-
-  - type: input
-    id: host-toolchain
-    attributes:
-      label: What toolchain and version are you using?
-      description: |
-        If your host machine is running macOS, specify the version of Xcode you’re using here. You can find out by selecting Xcode in Finder, then click File &rarr; Get Info.  
-        Otherwise, specify the toolchain you’re using – either the clang version number, or if you’re not sure, just specify where you downloaded it from.
-      placeholder: "e.g. Xcode 12.5, or clang 12.0.5"
-    validations:
-      required: true
-
-  - type: input
-    id: host-sdk
-    attributes:
-      label: Which SDK version are you using?
-      placeholder: "e.g. iOS 14.0"
-    validations:
-      required: true
-
-  - type: markdown
-    attributes:
-      value: |
-        ----
-
-        # Details of your client device (the device you’re attempting to run your code on)
-
-  - type: dropdown
-    id: client-os
-    attributes:
-      label: What OS is your client device running?
-      options:
-        - iOS
-        - macOS
-        - Linux/WSL
-        - Cygwin
-      multiple: true
-    validations:
-      required: true
-
-  - type: input
-    id: client-os-version
-    attributes:
-      label: What OS version does it have installed?
-      placeholder: "e.g. iOS 14.0"
-    validations:
-      required: true
-
-  - type: input
-    id: client-model
-    attributes:
-      label: Which device model is it?
-      placeholder: "e.g. iPhone X"
-    validations:
-      required: true
-
-  - type: input
-    id: client-jailbreak
-    attributes:
-      label: Which jailbreak is it using (if relevant)?
-      placeholder: "e.g. checkra1n"
